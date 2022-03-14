@@ -11,7 +11,7 @@ pipeline {
   }
   stage('Clean') {
    steps{
-    bat "dotnet clean https://github.com/gaganeti/ConsoleAppFramework/src/ConsoleAppFramework/ConsoleAppFramework.csproj"
+    bat "dotnet clean https://github.com/gaganeti/ConsoleAppFramework/tree/master/sandbox/Net6WebApp/Net6WebApp.csproj"
      }
    }
   stage('Build') {
