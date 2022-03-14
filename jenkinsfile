@@ -3,3 +3,9 @@ stage('Restore Packages') {
   bat "dotnet restore"
  }
 }
+
+stage('Clean') {
+ steps {
+  bat "dotnet clean"
+ }
+}
