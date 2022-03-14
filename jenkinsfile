@@ -9,6 +9,11 @@ pipeline {
     git credentialsId: '', url: 'https://github.com/gaganeti/ConsoleAppFramework', branch: 'master'
    }
   }
+  stage('Clean') {
+   steps{
+    bat "dotnet clean https://github.com/gaganeti/ConsoleAppFramework/src/ConsoleAppFramework/ConsoleAppFramework.csproj"
+     }
+   }
   stage('Build') {
    steps {
     bat 'dotnet build --configuration Release'
